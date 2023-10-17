@@ -1,10 +1,9 @@
 import { useRoute } from '@react-navigation/native'
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Image, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableOpacityBase, View } from 'react-native'
+import { ActivityIndicator, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import axios from "axios";
 import { getTypeColor } from '../../../helpers/stylePokemon';
 import { Ionicons } from '@expo/vector-icons';
-import { isColor } from 'react-native-reanimated';
 
 export const PokemonDetails = ({ navigation }) => {
   const { name } = useRoute().params;
@@ -80,7 +79,8 @@ const style = StyleSheet.create({
   },
   backBottom: {
     position: 'absolute',
-    left: 10,
+    left: 15,
+    top: 39
 
   },
   pokemonName: {
@@ -88,7 +88,7 @@ const style = StyleSheet.create({
     fontSize: 40,
     alignSelf: 'flex-start',
     left: 20,
-    top: 40
+    top: 70
   },
   pokeBall: {
     width: 250,
