@@ -5,7 +5,8 @@ export const PokemonDetails = () => {
     const { name } = useRoute().params;
   return (
     <View>
-        <Text>{name}</Text>
+       <View></View>
+       <View></View>
     </View>
   )
 }
