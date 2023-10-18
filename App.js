@@ -1,9 +1,7 @@
-import BottonTab from './src/routers/BottonTab';
+import BottonTab from "./src/routers/BottonTab";
 
 export default function App() {
-  return (
-    <BottonTab/>
-  );
+  return <BottonTab />;
 }
 
 // const styles = StyleSheet.create({
