@@ -14,37 +14,47 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 function StackHome() {
-    return(
+    return (
         <Stack.Navigator>
             <Stack.Screen name='Main' component={Home}
-            options={{headerShown: false}}
+                options={{ headerShown: false }}
             />
-            <Stack.Screen name='PokemonDetails' component={PokemonDetails} />
+            <Stack.Screen 
+            name='PokemonDetails' 
+            component={PokemonDetails}
+            options={{ 
+                headerShown: false
+            }}
+            />
         </Stack.Navigator>
     );
 }
 
-function TabGroup(){
-    return(
+function TabGroup() {
+    return (
         <Tab.Navigator
             screenOptions={() => ({
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
             })}
         >
             <Tab.Screen name="Home" component={StackHome}
-            options={{
-                tabBarIcon: ({focused}) => (<Entypo name="home" size={24} color={focused? '#0FB455':'#8B8C8B'} />),
-            }}
+                options={{
+                    tabBarIcon: ({ focused }) => (<Entypo name="home" size={24} color={focused ? '#0FB455' : '#8B8C8B'} />),
+                    headerShown: false
+                }}
             />
             <Tab.Screen name="Notification" component={Notification}
-            options={{
-                tabBarIcon: ({focused}) => (<Ionicons name="notifications" size={24} color={focused? '#0FB455':'#8B8C8B'} />)
-            }}
+                options={{
+                    tabBarIcon: ({ focused }) => (<Ionicons name="notifications" size={24} color={focused ? '#0FB455' : '#8B8C8B'} />)
+                }}
             />
-            <Tab.Screen name="Settings" component={Settings} 
-            options={{
-                tabBarIcon: ({focused}) => (<Ionicons name="settings" size={24} color={focused? '#0FB455':'#8B8C8B'} />)
-            }}
+            <Tab.Screen name="Settings" component={Settings}
+            screenOptions={() => ({
+                tabBarShowLabel: false
+            })}
+                options={{
+                    tabBarIcon: ({ focused }) => (<Ionicons name="settings" size={24} color={focused ? '#0FB455' : '#8B8C8B'} />)
+                }}
             />
         </Tab.Navigator>
     );
@@ -55,7 +65,7 @@ function TabGroup(){
 export default function BottonTab() {
     return (
         <NavigationContainer>
-            <TabGroup/>
+            <TabGroup />
         </NavigationContainer>
     );
 }
