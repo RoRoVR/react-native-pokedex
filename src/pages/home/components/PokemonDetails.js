@@ -25,6 +25,7 @@ export const PokemonDetails = ({ navigation }) => {
   }, [])
 
   return (
+
     <View style={{ flex: 1 }}>
       {/* HEADER */}
       <View
