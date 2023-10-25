@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{paddingTop:30}} >
       <Searcher />
       <FlatList
         data={pokemons}

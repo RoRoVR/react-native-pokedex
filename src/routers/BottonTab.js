@@ -65,7 +65,7 @@ function TabGroup() {
 export default function BottonTab() {
     return (
         <NavigationContainer>
-            <TabGroup />
+            <StackHome />
         </NavigationContainer>
     );
 }

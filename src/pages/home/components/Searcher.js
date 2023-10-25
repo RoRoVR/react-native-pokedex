@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { TextInput, StyleSheet, View, FlatList, Pressable, Text } from "react-native";
 import axios from "axios";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
 
@@ -18,7 +17,7 @@ export default function Searcher(){
             setSearch(t);
             setShowPokemonNames([]);
         }else{
-            const newShowPokemonNames = pokemonNames.filter(p => p.includes(t));
+            const newShowPokemonNames = pokemonNames.filter(p => p.includes(t.toLowerCase()));
             setSearch(t);
             setShowPokemonNames(newShowPokemonNames.slice(0,5));
         }
@@ -67,7 +66,8 @@ export default function Searcher(){
 const styles = StyleSheet.create({
     container: {
         paddingTop: 10,
-        paddingLeft: 10
+        paddingLeft: 10,
+        marginBottom: 10
     },
     flatList:{
         flex: 0.2,

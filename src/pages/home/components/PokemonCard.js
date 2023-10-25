@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Text, View, Image, StyleSheet, Pressable } from "react-native";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
-import {
-  formatNumber,
-  getBackColor,
-  getTypeColor,
-} from "../../../helpers/stylePokemon";
+import { getBackColor, getTypeColor } from "../../../helpers/stylePokemon";
 import CardStyles from "../../../helpers/CardStyles";
 
 export default function PokemonCard({ url }) {
